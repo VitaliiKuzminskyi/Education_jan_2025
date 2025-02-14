@@ -1,3 +1,5 @@
+#усе що треба для роботи цтого тесту у ньому і знаходиться, жодних зовнішніх файлів
+
 import pytest
 from selenium import webdriver  #обращение к вебдрайверу в селениуме
 from selenium.webdriver.common.by import  By #импортує усі способи пошуку елементів під капотом
