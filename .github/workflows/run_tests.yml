@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Tests
     steps:
+      - name: Stop Chrome processes
+        run:
+          pkill -f chrome
       - name: Copy source code
         uses: actions/checkout@v3
       - name: Set up Python env
