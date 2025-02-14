@@ -17,12 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Tests
     steps:
-      - name: Copy source cod
+      - name: Copy source code
         uses: actions/checkout@v4
       - name: Set up Python env
         uses: actions/setup-python@v5
         with:
-          python: "3.12"
+          python: "3.10"
       - name: install dependnencies
         run: pip install -r requirments.txt
       - name: Run tests
