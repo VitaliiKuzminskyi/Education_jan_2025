@@ -1,9 +1,5 @@
 import pytest
 
-class Dog:
-    color = 'Black'
-    def __init__(self):
-        pass
 
 @pytest.fixture(scope='session')
 def session_fixture():
@@ -12,18 +8,18 @@ def session_fixture():
     print('\nAfter all session')
 
 
-# @pytest.fixture(scope='package')
-# def package_fixture():
-#     print('\nBefore each package')
-#     yield
-#     print('\nAfter each package')
-#
-#
-# @pytest.fixture(scope='class')
-# def class_fixture():
-#     print('\nBefore each class')
-#     yield
-#     print('\nAfter each class')
+@pytest.fixture(scope='package')
+def package_fixture():
+    print('\nBefore each package')
+    yield
+    print('\nAfter each package')
+
+
+@pytest.fixture(scope='class')
+def class_fixture():
+    print('\nBefore each class')
+    yield
+    print('\nAfter each class')
 
 
 @pytest.fixture(scope='function')
